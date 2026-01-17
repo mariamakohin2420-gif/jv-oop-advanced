@@ -1,14 +1,22 @@
 package core.basesyntax;
 
 public class Figure {
-    public float area;
-    public int units;
-    public String color;
+    private float area;
+    private int side;
+    private String color;
+    private float radius;
 
     public Figure(){
+    }
+    Figure figure = new Figure();
+    public void setValues(float area, int side, String color, float radius){
         this.area = area;
-        this.units = units;
+        this.side = side;
         this.color = color;
+        this.radius = figure.radius;
+    }
+    public String getValues() {
+        String info = "Figure: " + getRandomFigure() + ", area: " + area + " sq. units, side: " + " color: " + color;
     }
 
 
