@@ -11,13 +11,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.base2 = base2;
         this.height = height;
     }
+
     public double getArea() {
         return (base1 + base2) * height / 2;
     }
+
     public void draw() {
         System.out.println("Figure: trapezoid, area: " + getArea()
-            + " sq. units, base1: " + base1 + " base2: " + base2
-            + " height: " + height + " color; " + color);
+                + " sq. units, base1: " + base1 + " base2: " + base2
+                + " height: " + height + " color; " + color);
 
     }
 

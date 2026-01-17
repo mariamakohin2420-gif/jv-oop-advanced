@@ -28,6 +28,7 @@ public class FigureSupplier {
                         color);
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle(10, "white");
     }

@@ -15,8 +15,8 @@ public class Rectangle extends Figure {
     }
 
     public void draw() {
-            System.out.println("Figure: rectangle, area: " + getArea()
-            + " sq. units, width: " + width + " height: " + height
-                + " color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea()
+                    + " sq. units, width: " + width + " height: " + height
+                    + " color: " + color);
     }
 }
