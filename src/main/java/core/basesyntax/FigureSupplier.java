@@ -1,12 +1,34 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
-    public Figure getRandomFigure(){
-        Random random = new Random();
-        int randomFigure = random.nextFigure();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getRandomFigure() {
+        int type = random.nextInt(5);
+        String color = colorSupplier.getRandomColor();
+
+        switch (type) {
+            case 0:
+                return new Square(random.nextInt(10) + 1, color);
+            case 1:
+                return new Rectangle(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1, color);
+            case 2:
+                return new RightTriangle(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1, color);
+            case 3:
+                return new Circle(random.nextInt(10) + 1, color);
+            default:
+                return new IsoscelesTrapezoid(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
+                        color);
+        }
     }
-    public Figure getDefaultFigure(){
-
+    public Figure getDefaultFigure() {
+        return new Circle(10, "white");
     }
 }
