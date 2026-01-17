@@ -10,12 +10,14 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
 
     }
+
     public double getArea() {
         return firstLeg * secondLeg / 2;
     }
+
     public void draw() {
-        System.out.println("Figure: triangle, area: " + getArea()
-        + " sq. units, firstLeg: " + firstLeg + " secondLeg: "
+            System.out.println("Figure: triangle, area: " + getArea()
+            + " sq. units, firstLeg: " + firstLeg + " secondLeg: "
                 + secondLeg + " color: " + color);
     }
 }
